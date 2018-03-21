@@ -1,4 +1,4 @@
-# Crowdsale token and Crowdsale Smart Contracts and simple DApp for control
+# ERC20 token / Crowdsale Smart Contracts / Simple DApp for ICO 
 [![Platform](https://img.shields.io/badge/Token%20Symbol-LOGIQ-aqua.svg)]()
 [![Platform](https://img.shields.io/badge/Platform-Ethereum-brightgreen.svg)](https://en.wikipedia.org/wiki/Ethereum)
 [![Platform](https://img.shields.io/badge/Standard-ERC20-blue.svg)](https://en.wikipedia.org/wiki/ERC20)
