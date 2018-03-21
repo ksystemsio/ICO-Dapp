@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logiq - Frontend</title>
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="./app.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <h1>Buy tokens</h1>
+</div>
+
+<div class="wrapper">
+    <div class="row">
+        <div class="group">
+            <input type="text" id="amount" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="amount">Tokens amount:</label>
+
+            <button id="send" onclick="App.buyTokens()">Buy Tokens</button>
+        </div>
+        <div class="group">
+            <input type="text" id="beneficiary" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="amount">Beneficiary:</label>
+
+            <button id="refundTokens" onclick="App.refundTokens()">Refund tokens</button>
+        </div>
+    </div>
+
+    <div id="status"></div>
+    <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+</div>
+
+<div class="header">
+    <h1>Logiq Crowdsale user</h1>
+    <a href="index.html">admin area</a>
+</div>
+
+<div class="wrapper">
+
+    <div class="row info">
+        <div class="group">
+            <input type="text" class="align-left no-clickable" id="address"
+                   value="0x90b16a059a4b331caa7c0d0a2d03e1bc5eb8f3d3" readonly>
+            <label for="address">Contract address:</label>
+        </div>
+        <div class="group">
+            <input class="align-left no-clickable" id="account" readonly>
+            <label for="account">Your wallet:</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>My info:</h3>
+        <button id="refreshBalance" onclick="App.refreshBalance()">Update info</button>
+
+        <p>
+            1 ETH = $ <span id="ethereumPrice"></span> <i>(from <a href="https://www.coinmarketcap.com" target="_blank">Coinmarketcap.com</a>)</i>
+        </p>
+        <p>
+            <span class="black">
+                <span id="balance"></span>
+                ETH (unconfirmed)
+            </span>
+        </p>
+        <p>
+            <span class="black">
+                <span id="balance_confirmed"></span>
+                LOGIQ (confirmed)
+            </span>
+        </p>
+        <p>Whitelisted
+            <span class="black">
+                <span id="whitelisted"></span>
+            </span>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

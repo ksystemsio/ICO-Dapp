@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logiq - Frontend</title>
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Roboto">
+    <script src="./app.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <h1>Crowdsale Admin area</h1>
+    <a href="user.html">user area</a>
+</div>
+
+<div class="wrapper">
+
+    <div class="row info">
+        <div class="group">
+            <input type="text" class="align-left no-clickable" id="address" value="0x90b16a059a4b331caa7c0d0a2d03e1bc5eb8f3d3" readonly>
+            <label for="address">Contract address:</label>
+        </div>
+        <div class="group">
+            <input class="align-left no-clickable" id="account" readonly>
+            <label for="account">Your wallet:</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Add to whitelist address</h3>
+        <div class="group">
+            <input type="text" id="whitelist" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="whitelist">Beneficiary address:</label>
+
+            <button id="send2" title="Submit" onclick="App.whitelistAddress()">send</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Refund</h3>
+        <div class="group">
+            <input type="text" id="refund" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label for="refund">Beneficiary address:</label>
+
+            <button id="send4" title="Submit" onclick="App.refundTokensForAddress()">send</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <textarea  wrap="hard" id="addresses" rows="20" cols="70" readonly></textarea>
+        <button id="send3" onclick="App.getAddresses()">get addresses</button>
+    </div>
+
+    <div class="row">
+        <div id="status"></div>
+        <div class="hint">
+            <strong>Hint:</strong> open the browser developer console to view any errors and warnings.
+        </div>
+    </div>
+
+</div>
+
+<div class="header">
+    <h1>Crowdsale info</h1>
+</div>
+
+<div class="wrapper">
+    <div class="table">
+        <div class="tr">
+            <span class="td">Token address</span>
+            <span class="td" id="token"></span>
+        </div>
+        <div class="tr">
+            <span class="td">Buy price 1 ETH:</span>
+            <span class="td" id="buyPrice"></span>
+        </div>
+        <div class="tr">
+            <span class="td">Softcap:</span>
+            <span class="td" id="softcap"></span>
+        </div>
+        <div class="tr">
+            <span class="td">Hardcap:</span>
+            <span class="td" id="hardcap"></span>
+        </div>
+        <div class="tr">
+            <span class="td">Crowdsale status:</span>
+            <span class="td" id="crowdSaleStatus"></span>
+        </div>
+        <div class="tr">
+            <span class="td">Deadline:</span>
+            <span class="td" id="ICOdeadLine"></span>
+        </div>
+        <div class="tr">
+            <span class="td">Tokens sold:</span>
+            <span class="td" id="tokensSold"></span>
+        </div>
+        <div class="tr">
+            <span class="td">ETH delivered:</span>
+            <span class="td" id="weiDelivered"></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+body {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    font-family: 'Roboto';
+    background: #e2e1e0;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none
+}
+
+.wrapper {
+    background: #fff;
+    border-radius: 2px;
+    width: 100%;
+    padding: 25px 20px;
+    margin-bottom: 45px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+button {
+    font-size: 16px;
+    padding: 5px;
+}
+
+h1 {
+    margin-bottom: 25px
+}
+
+h1, h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #AAA;
+    font-size: 32px;
+}
+
+h3 {
+    font-weight: normal;
+    color: #1f1f1f;
+    font-size: 24px;
+}
+
+.black {
+    color: black;
+}
+
+#balance {
+    color: black;
+}
+
+.hint {
+    color: #666;
+}
+
+.align-left {
+    text-align: right;
+}
+
+.no-clickable {
+    padding-right: 5px;
+    pointer-events: none;
+    border: none;
+}
+
+.row {
+    margin: 25px 0 45px;
+    position: relative;
+}
+
+.row button {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: rgba(82, 100, 174, 0.7);
+    transition: color 0.2s;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.row textarea {
+    resize: none;
+    padding: 8px 8px 45px 8px;
+    overflow: hidden;
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 14px !important;
+    line-height: 1em !important;
+}
+
+.row textarea ~ button {
+    right: 10px;
+    bottom: 15px;
+}
+
+.row button:hover,
+.row button:focus,
+.row button:active {
+    color: #5264AE;
+}
+
+.group {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+.row.info .group {
+    margin: 15px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    text-transform: capitalize;
+    color: rgba(82, 100, 174, 0.7);
+    border: 1px solid rgba(82, 100, 174, 0.5);
+    text-decoration: blink;
+    transition: all 0.2s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.header a:hover,
+.header a:focus,
+.header a:active {
+    color: rgba(82, 100, 174, 1);
+    border: 1px solid rgba(82, 100, 174, 1);
+}
+
+label {
+    color: #999;
+    font-size: 18px;
+    line-height: 1em;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+input {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    padding: 10px 80px 10px 5px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -12px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 50%;
+}
+
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 75%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+
+input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.table .tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e2e1e0;
+    padding: 10px 0;
+}
